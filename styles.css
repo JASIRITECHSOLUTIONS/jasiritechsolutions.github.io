@@ -1,267 +1,224 @@
 /* General Styles */
 body {
-    /* Add styles for the entire page, such as background, font, margin, etc. */
-    font-family: Arial;
-    font-size: 1.3em;
-    color: #333;
-    background-color: #f5f5f5;
-}
-
-h1, h2, p {
-    /* General styles for headings and paragraphs (e.g., font-family, color, spacing) */
-    font-family: helvettica;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #4a4a4a; /* Dark gray text */
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Added padding to avoid content being hidden behind fixed header */
 }
 
 /* Header Section */
 header {
-    /* Styles for the header section (e.g., background-color, padding, text alignment) */
+    background-color: #0066cc; /* Blue header background */
+    color: white;
     text-align: center;
-    max-height: 2.5cm;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure header stays on top */
 }
 
 header h1 {
-    /* Styles for the main heading inside the header */
-    margin: 20px;
+    margin: 0;
 }
 
 header p {
-    /* Styles for the subtitle inside the header */
-    margin: 2px;
-    font-size: 20px;
+    margin: 0;
+    font-size: 1rem;
 }
 
 /* Navigation Bar */
 nav {
-    /* Styles for the navigation bar container */
-    overflow: hidden;
-    background-color: #330b7c;
-    padding: 2px;
-    border-radius: 4px;
+    position: fixed;
+    top: 60px; /* Adjusted for the header's height */
+    left: 0;
+    background-color: #003366; /* Dark blue navigation background */
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 999; /* Ensure navigation stays above content */
 }
 
 nav a {
-    /* Styles for the navigation links (e.g., color, text-decoration) */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    float: left;
     color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
     font-size: 18px;
-    line-height: 25px;
+    padding: 12px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    font-weight: bold;
     border-radius: 4px;
-}
-
-nav a:selected {
-    /*Styles for selection effects on navigation links*/
+    text-decoration: none;
 }
 
 nav a:hover {
-    /* Styles for hover effects on navigation links */
-    background-color: dodgerblue;
-    color: white;
+    background-color: #ff6600; /* Orange hover effect */
 }
 
-@media screen and (max-width: 870px) {
-    nav .lnks {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px 40px; /* Added padding-top to account for fixed header */
+    background-color: #e6f7ff; /* Light blue background */
 }
 
-/* Section Styles */
-section {
-    /* General styles for sections (e.g., padding, background, alignment) */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /*box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;*/
+.hero h2 {
+    font-size: 2rem;
+    color: #003366; /* Dark blue text */
 }
 
+.hero p {
+    font-size: 1.2rem;
+    color: #666666; /* Medium gray text */
+}
+
+/* Service Section */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #003366; /* Dark blue for service titles */
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555; /* Dark gray text */
+}
+
+/* About Section */
 section h2 {
-    /* Styles for section titles */
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 40px;
+    color: #003366; /* Dark blue section titles */
 }
 
 section p {
-    /* Styles for paragraphs inside sections */
-    /*font-size: */
-}
-
-section ul {
-    /* Styles for unordered lists inside sections */
-}
-
-section ul li {
-    /* Styles for list items inside unordered lists */
-}
-
-/* Footer Styles */
-footer {
-    /* Styles for the footer container */
+    font-size: 1.1rem;
     text-align: center;
-    position: relative;
+    color: #555;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
-footer p {
-    /* Styles for paragraphs inside the footer */
-}
-
-footer span {
-    /* Styles for spans inside the footer */
-}
-
-footer a {
-    /* Styles for links inside the footer */
-}
-
-footer a:hover {
-    /* Styles for hover effects on footer links */
-}
-
-/* Form Styles (Contact Page) */
+/* Contact Form */
 form {
-    /* Styles for the form container */
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form label {
-    /* Styles for form labels */
-}
-
-form label span {
-    /* Styles for form labels */
-    color: red;
     font-weight: bold;
-}
-
-#budget {
-	text-align: center;
-	text-decoration: none;
+    margin-bottom: 10px;
 }
 
 form input,
 form textarea {
-    /* Styles for input fields and textareas */
-    /*margin-top: 20px;
-    text-align: left;*/
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #0066cc; /* Blue border on focus */
 }
 
 form button {
-    /* Styles for the submit button */
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #0066cc; /* Blue button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Blog Page List */
-section ul li a {
-    /* Styles for links inside blog posts list */
+form button:hover {
+    background-color: #004d99; /* Darker blue on hover */
 }
 
-.img-gallery {
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+/* Footer Section */
+footer {
+    background-color: #003366; /* Dark blue footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensure footer stays on top of content */
 }
 
-.img-gallery img {
-    width: auto;
-    height: auto;
-    border: 3px solid #555;
-    border-radius: 10px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
 
-img:hover {
-    transform: scale(1.1);
-    border: 3px;
-}
+@media (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
 
-.or {
-	text-align: center;
-	font-size: 15px;
-	font-weight: bold;
-	color: red green blue;
-	margin: 1px;
-}
+    .hero h2 {
+        font-size: 1.2rem;
+    }
 
-#launch-date {
+    .hero p {
+        font-size: 0.9rem;
+    }
 
-}
-
-#what-we-do {
-	display: run-in;
-	justify-content: center;
-	border-top-color: red;
-	text-align: center;
-}
-
-#i-c-t-c {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-bottom-color: red;
-}
-
-#i-c-t-c:hover {
-	background-color: red;
-}
-
-#n-d-a-i {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-top-color: red;
-}
-
-#n-d-a-i:hover {
-	background-color: orange;
-}
-
-#w-d-a-i {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-bottom-color: red;
-}
-
-#w-d-a-i:hover {
-	background-color: yellow;
-}
-
-#m-a-d {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-top-color: red;
-}
-
-#m-a-d:hover {
-	background-color: green;
-}
-
-#m-i-s {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-bottom-color: red;
-}
-
-#m-i-s:hover {
-	background-color: blue;
-}
-
-#a-i-r-a-m-l {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-top-color: red;
-}
-
-#a-i-r-a-m-l:hover {
-	background-color: indigo;
-}
-
-#s-e-o {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-bottom-color: 3px red;
-}
-
-#s-e-o:hover {
-	background-color: violet;
-}
-
-#i-c-t-t-a-c {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	border-top-color: red;
-}
-
-#i-c-t-t-a-c:hover {
-	background-color: cream;
-	cursor: progress;
+    form button {
+        font-size: 1rem;
+    }
 }
