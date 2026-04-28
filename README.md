@@ -1,6 +1,6 @@
 # Jasiri Tech Solutions — Website
 
-A multi-page static website for **Jasiri Tech Solutions**, an ICT company based in Nakuru, Kenya.
+A multi-page static website for **Jasiri Tech Solutions**, an ICT company based in Kenya.
 Hosted via **GitHub Pages**.
 
 ---
